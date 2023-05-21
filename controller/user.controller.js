@@ -32,7 +32,7 @@ const saveUser = (req, res) => {
 
         let parsedData = JSON.parse(data);
         for(let i=0; i<parsedData.length; i++){
-          if(parsedData[i].name == newUser.name) 
+          if(parsedData[i].email == newUser.email) 
           return res.status(500).json({ error: "User Already Exists" });
         }
         parsedData.push(newUser);
