@@ -101,6 +101,7 @@ During the development process, the following challenges were encountered:
 
 The development of this project provided the following key lessons:
 
+- **Creating Documentation:** First time I have prepaired the documentations of a assignment which has no frontend.
 - **Simplified web application development with Express:** Express simplifies web application development by providing a straightforward way to define routes, handle requests, and manage middleware. It abstracts away many complexities, allowing developers to focus on the core functionality of the application. It is much easier to implement the server compared to the conventional HTTP methods.
-- **Enhancing functionality with middleware:** Middleware functions provide a flexible way to add common functionality to the application, such as logging and error handling. They can be chained together and executed in a specific order, enhancing the overall functionality and maintainability of the application.
+- **Enhancing functionality with middleware:** Middleware functions provide a flexible way to add common functionality to the application, such as logging and error handling. They can be chained together and executed in a specific order, enhancing the overall functionality and maintainability of the application. Also, first time I have created error handling and invalid routes handling middlewares
 - **Careful handling of file operations:** When working with file operations, it's important to handle errors gracefully and consider potential race conditions. Proper error handling and understanding of asynchronous programming are crucial for ensuring data integrity and a smooth user experience.
