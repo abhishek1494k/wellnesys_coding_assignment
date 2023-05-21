@@ -3,12 +3,12 @@ const app = express();
 
 const fs = require("fs");
 
-//----->>>>> M/W for Invalid Routes<<<<<-----
+//----->>>>> Server Contoller <<<<<-----
 const serverController = (req, res) => {
   try {
-    res.json({ msg: "Welcome" });
+    res.status(200).json({ msg: "Welcome" });
   } catch (error) {
-    res.json({ Error: error });
+    res.status(404).json({ error: error });
   }
 };
 

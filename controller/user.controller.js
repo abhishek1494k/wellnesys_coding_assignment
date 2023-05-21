@@ -11,18 +11,17 @@ const getUser = (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
       } else {
         const users = JSON.parse(data);
-        res.status(201).json(users);
+        res.status(200).json(users);
       }
     });
   } catch (error) {
-    res.status(404).json({ Error: error });
+    res.status(404).json({ error: error });
   }
 };
 
 //------------->>>>> Save Users Data <<<<<----------------
 const saveUser = (req, res) => {
-  let newUser = req.body;
-  let data;
+  const newUser = req.body;
 
   try {
     fs.readFile(`./config/db.json`, "utf8", (err, data) => {
@@ -30,11 +29,17 @@ const saveUser = (req, res) => {
         console.error("Error reading file:", err);
         res.status(500).json({ error: "Internal Server Error" });
       } else {
-        data = JSON.parse(data);
-        data.push(newUser);
+
+        let parsedData = JSON.parse(data);
+        for(let i=0; i<parsedData.length; i++){
+          if(parsedData[i].name == newUser.name) 
+          return res.status(500).json({ error: "User Already Exists" });
+        }
+        parsedData.push(newUser);
+
         fs.writeFile(
           "./config/db.json",
-          JSON.stringify(data),
+          JSON.stringify(parsedData),
           "utf8",
           (err) => {
             if (err) {

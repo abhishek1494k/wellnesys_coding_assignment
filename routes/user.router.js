@@ -4,6 +4,7 @@ const userRouter = express.Router();
 
 const { saveUser, getUser } = require("../controller/user.controller");
 
+// ----->>>>>Users Routes<<<<<-----
 userRouter.post("/", saveUser);
 userRouter.get("/", getUser);
 
