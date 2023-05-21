@@ -1,8 +1,10 @@
 <div align="center" >
 <img src="https://media.licdn.com/dms/image/C560BAQFmljCcxUi2iQ/company-logo_200_200/0/1641160775949?e=2147483647&v=beta&t=hIsYjrJBh3Ecm4Ls3BQ43v4TFyedaZrJqHfeE8-_4uM" />
-</div>
 
 #  Node.js Express Application Development (Wellnesys)
+</div>
+
+## Description
 
 This is a simple web application built using Node.js and the Express framework. It provides a basic server that listens on a specified port and implements three different routes. The application allows users to retrieve a welcome message, save user information via a POST request, and retrieve user information via a GET request.
 
