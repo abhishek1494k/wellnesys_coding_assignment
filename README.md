@@ -1,16 +1,20 @@
-# Node.js Express Application Development
+#  Node.js Express Application Development (Wellnesys)
 
 This is a simple web application built using Node.js and the Express framework. It provides a basic server that listens on a specified port and implements three different routes. The application allows users to retrieve a welcome message, save user information via a POST request, and retrieve user information via a GET request.
 
 ## Installation
 
 1. Clone the repository or download the source code.
-2. Install Node.js on your system if not already installed.
-3. Open a terminal or command prompt and navigate to the project directory.
+2. There is no root folder/repo.
+3. Open a terminal or command prompt and navigate to the project directory named wellnesys_coding_assignment.
 4. Run the following command to install the project dependencies:
 
 ```shell
 npm install
+```
+5. Once dependencies are installed, start the server in root directory
+```shell
+npx nodemon gserver.js
 ```
 
 ## Routes
