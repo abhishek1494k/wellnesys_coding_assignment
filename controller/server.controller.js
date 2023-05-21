@@ -1,10 +1,15 @@
-const express=require("express")
+const express = require("express");
 const app = express();
 
-const fs=require("fs");
+const fs = require("fs");
 
-const serverController = (req,res) =>{
-    res.send({msg:"Welcome"})
-}
+//----->>>>> M/W for Invalid Routes<<<<<-----
+const serverController = (req, res) => {
+  try {
+    res.json({ msg: "Welcome" });
+  } catch (error) {
+    res.json({ Error: error });
+  }
+};
 
-module.exports = {serverController}
+module.exports = { serverController };
